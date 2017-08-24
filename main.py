@@ -22,4 +22,4 @@ def convert():
     if request.form['mode']=='slow':
         res=True
     sound_gen(text=text,lan=lan,mode=res)
-    return app.send_static_file('text.mp3')
+    return send_from_directory(as_attachment=True, directory='cache', filename='text.mp3')
