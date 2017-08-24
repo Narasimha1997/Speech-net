@@ -21,6 +21,13 @@
     .jumbotron{
       background:#00897B;
     }
+    .fl1{
+      color: #ffffff;
+      background: #689F38
+    }
+    .j1{
+      background: #689F38
+    }
     </style>
   </head>
   <body>
@@ -40,8 +47,8 @@
      <div class="row">
        <div class="col-sm-8">
          <div class="jumbotron">
-           <h3>Paste your text here:</h3>
-           <p>Paste a text of any length here: </p>
+           <h3>Synchronous mode:</h3>
+           <p>Paste a text of small or medium length: </p>
            <form action="http://speech-net.herokuapp.com/convert" method="POST">
              <div class='form-group'>
                <textarea class='form-control' placeholder='' name="txt" ></textarea>
@@ -74,6 +81,50 @@
        </div>
      </div>
    </div>
+   <div class="container-fluid fl1">
+     <div class="row">
+       <div class="col-sm-8">
+         <div class="jumbotron j1">
+           <h3>Convert as background task</h3>
+           <p>If your content is too big, it is always recommended to use this service,
+           because synchronization of long process may cause connection to time-out, This service
+         places an asynchronous task on the server, and you will be mailed once the task is complete</p>
+         <form action="http://speech-net.herokuapp.com/long_upload" method="post">
+           <div class='form-group'>
+             <label for='name-id'>Email ID:</label>
+             <input type="text" class="form-control" value="email.." name="id"/>
+           </div>
+           <div class='form-group'>
+             <label for='name-id'>Text: </label>
+             <textarea class='form-control' placeholder='' name="txt" ></textarea>
+           </div>
+           <div class='form-group'>
+             <label for='name-id'>Language:</label>
+             <select name="lan" class="form-control">
+               <option value="en">English</option>
+               <option value="fr">French</option>
+               <option value="hi">Hindi</option>
+               <option value="de">German</option>
+               <option value="it">Italian</option>
+               <option value="en-uk">English (UK)</option>
+              </select>
+           </div>
+          <div class='form-group'>
+            <select name="slow" class="form-control">
+              <p>Select mode:</p>
+              <option value="fast">Fast</option>
+              <option value="slow">Slow</option>
+             </select>
+          </div>
+          <button type='submit' class='btn btn-lg btn-default '>Submit task</button>
+         </form>
+         </div>
+       </div>
+       <div class="col-sm-4">
+         <img src="https://www.visualstudio.com/wp-content/uploads/2016/06/TeamFoundationServer_636x350-op.png" class="img-responsive"/>
+       </div>
+     </div>
+  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
