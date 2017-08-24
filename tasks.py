@@ -26,7 +26,7 @@ def task(id,gtts_text,lan,slow):
     if slow=='slow':
         bool_=True
     multimode_tts(text=gtts_text, f_name='text.mp3', lang=lan, slow=bool_)
-    send_mail(id=id, link='http://speech-net.herokuapp.com/job_cache')
+    #send_mail(id=id, link='http://speech-net.herokuapp.com/job_cache')
     pass
 
 def async_taskStart(parms):
