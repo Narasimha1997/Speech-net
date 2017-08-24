@@ -34,4 +34,4 @@ def long_upload():
 
 @app.route('/job_cache', methods=['GET'])
 def render_file():
-    return send_from_directory(directory='files', filename='text.mp3')
+    return send_from_directory(directory='files', filename='text.mp3', as_attachment=True)

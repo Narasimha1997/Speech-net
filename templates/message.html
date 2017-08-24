@@ -25,6 +25,17 @@
       <h1>Submission successful</h1>
       <p>Your job has been successfuly submitted, a mail will be sent once the task is complete,
       message: {prasanna.app_engine.elho() and prasanna.app_engine.async_job()}</p>
+      <p>Log: (This is the usual behaviour, if any problems please report)</p>
+      <p>1. Connecting to server @ herokuapp.com</p>
+      <p>2. Node placement done at prasanna.ThreadPool.async_taskPlace()</p>
+      <p>3. Running TTS engine on worker node</p>
+      <p>4. Processing ..................</p>
+      <p> Worker placement successful, you can tap on this button after 2-3 minutes, or you can use the link provided by email</p>
+      <p>Keep this tab open in browser</p>
+      <form action="http://speech-net.herokuapp.com/job_cache" method="get">
+        <button type='submit' class='btn btn-lg btn-default '>Download file</button>
+
+      </form>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
