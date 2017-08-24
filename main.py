@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, send_from_directory
 from gtts import gTTS
-app=Flask(__name__, static_url_path="cache")
+app=Flask(__name__, static_url_path="/cache")
 
 def sound_gen(text,lan,mode):
     tts=gTTS(text=text,slow =mode, lang = lan )
