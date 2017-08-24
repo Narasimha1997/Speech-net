@@ -31,3 +31,7 @@ def long_upload():
     parms={'id':request.form['id'], 'text':request.form['text'], 'lan':request.form['lan'], 'slow':request.form['slow']}
     Thread(target=tasks.async_taskStart, args=(parms,)).start()
     return render_template('message.html')
+
+@app.route('/job_cache', methods=['GET'])
+def render_file():
+    return send_from_directory(directory='files', filename='text.mp3')
