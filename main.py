@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, send_from_directory
 from gtts import gTTS
-app=Flask(__name__)
+app=Flask(__name__, static_url_path="cache")
 
 def sound_gen(text,lan,mode):
     tts=gTTS(text=text,slow =mode, lang = lan )
@@ -22,4 +22,4 @@ def convert():
     if request.form['mode']=='slow':
         res=True
     sound_gen(text=text,lan=lan,mode=res)
-    return send_from_directory(directory='cache', filename='text.mp3')
+    return app.send_static_file('text.mp3')
