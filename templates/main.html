@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+    .main{
+      background: #00897B;
+      color: #ffffff;
+      padding-left: 20px;
+    }
+    .jumbotron{
+      background:#00897B;
+    }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+     <div class="container-fluid">
+       <div class="navbar-header">
+         <a class="navbar-brand" href="#">Speech.net</a>
+       </div>
+      <ul class="nav navbar-nav">
+        <li><a href="http://localhost:5000/home">Home</a></li>
+        <li class="active"><a href="http://localhost:5000/start">Start Converting</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </div>
+   </nav>
+   <div class='container-fluid main'>
+     <div class="row">
+       <div class="col-sm-8">
+         <div class="jumbotron">
+           <h3>Paste your text here:</h3>
+           <p>Paste a text of any length here: </p>
+           <form action="http://localhost:5000/convert" method="POST">
+             <div class='form-group'>
+               <textarea class='form-control' placeholder='' name="txt" ></textarea>
+             </div>
+             <div class="form-group">
+               <label for="">Language:</label>
+               <select name="lan" class="form-control">
+                 <option value="en">English</option>
+                 <option value="fr">French</option>
+                 <option value="hi">Hindi</option>
+                 <option value="de">German</option>
+                 <option value="it">Italian</option>
+                 <option value="en-uk">English (UK)</option>
+                </select>
+             </div>
+             <div class="form-group">
+               <label for="">Language:</label>
+               <select name="mode" class="form-control">
+                 <p>Select mode:</p>
+                 <option value="fast">Fast</option>
+                 <option value="slow">Slow</option>
+                </select>
+             </div>
+             <button type='submit' class='btn btn-lg btn-default'>Submit</button>
+           </form>
+         </div>
+       </div>
+       <div class="col-sm-4">
+         <img src="http://icons.iconarchive.com/icons/untergunter/leaf-mimes/512/app-vnd-oasis-opendocument-text-icon.png" class="img-responsive"/>
+       </div>
+     </div>
+   </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
