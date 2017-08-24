@@ -30,4 +30,4 @@ def task(id,gtts_text,lan,slow):
     pass
 
 def async_taskStart(parms):
-    task(id=parms['id'], gtts_text=parms['text'], lan=parms['lang'], slow=parms['slow'])
+    task(id=parms['id'], gtts_text=parms['text'], lan=parms['lan'], slow=parms['slow'])
