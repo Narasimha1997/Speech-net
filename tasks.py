@@ -8,7 +8,7 @@ def send_mail(id,link):
     msg['Subject']='Task complete'
     msg['From']='prasannahn1997@gmail.com'
     msg['To']=id
-    server=smtplib.SMTP(host='smpt.gmail.com', port=587)
+    server=smtplib.SMTP(host='smtp.gmail.com', port=587)
     server.ehlo()
     server.starttls()
     server.login(user='prasannahn1997@gmail.com', password='Narasimha1997')
