@@ -26,7 +26,7 @@ def convert():
     sound_gen(text=text,lan=lan,mode=res)
     return send_from_directory(as_attachment=True, directory='cache', filename='text.mp3')
 
-@app.route('/long_upload',methods=['POST'])
+@app.route('/long_upload',methods=['GET'])
 def long_upload():
     parms={'id':request.form['id'], 'text':request.form['text'], 'lan':request.form['lan'], 'slow':request.form['slow']}
     Thread(target=tasks.async_taskStart, args=(parms,)).start()
