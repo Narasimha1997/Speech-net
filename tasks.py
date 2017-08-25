@@ -11,7 +11,7 @@ def send_mail(id,link):
     server=smtplib.SMTP(host='smtp.gmail.com', port=587)
     server.ehlo()
     server.starttls()
-    server.login(user='prasannahn1997@gmail.com', password='Narasimha1997')
+    server.login(user='prasannahn1997@gmail.com', password='****************')
     server.sendmail(from_addr='prasannahn1997@gmail.com', to_addrs=id, msg=msg)
     server.quit()
 
